@@ -18,10 +18,16 @@ interface TestimonialsColumnProps {
 
 export const TestimonialsColumn = ({ className, testimonials, duration = 10 }: TestimonialsColumnProps) => {
   return (
-    <div className={className}>
+    <div className={`${className} relative overflow-hidden`}>
+      <div 
+        className="absolute inset-0 pointer-events-none z-10"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%)'
+        }}
+      />
       <motion.div
         animate={{
-          translateY: "-50%",
+          translateY: ["0%", "-50%"],
         }}
         transition={{
           duration: duration,
