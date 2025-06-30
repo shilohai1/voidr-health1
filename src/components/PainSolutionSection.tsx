@@ -52,17 +52,13 @@ export const PainSolutionSection = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl shadow-2xl flex items-center justify-center"
+                className="w-96 h-96 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl shadow-2xl flex items-center justify-center overflow-hidden"
               >
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 bg-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900">AI-Powered Learning</h3>
-                  <p className="text-slate-600">Transform complex medical concepts into digestible content</p>
-                </div>
+                <img 
+                  src="/lovable-uploads/9213e7ba-095b-4588-a9f5-2ad055951ad4.png" 
+                  alt="Medical student studying anatomy" 
+                  className="w-full h-full object-cover rounded-3xl"
+                />
               </motion.div>
             </div>
           </motion.div>
