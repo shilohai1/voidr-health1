@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -142,16 +141,16 @@ export const PricingSection = () => {
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.05 }}
-                    className="relative"
+                    className="relative z-10"
                   >
                     {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
                         <span className="bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                           Most Popular
                         </span>
                       </div>
                     )}
-                    <Card className={`h-full ${plan.popular ? 'ring-2 ring-green-500 shadow-xl' : 'shadow-lg'} bg-white/80 backdrop-blur-sm border-0`}>
+                    <Card className={`h-full ${plan.popular ? 'ring-2 ring-green-500 shadow-xl' : 'shadow-lg'} bg-white/80 backdrop-blur-sm border-0 relative z-0`}>
                       <CardHeader className="text-center">
                         <CardTitle className="text-2xl font-bold text-slate-900">
                           {plan.name}
