@@ -21,7 +21,7 @@ const Index = () => {
   const [script, setScript] = useState("");
   const [voice, setVoice] = useState(voices[0].value);
   const [loading, setLoading] = useState(false);
-  const [resultUrl, setResultUrl] = useState<string | null>(null);
+  const [resultUrl, setResultUrl] = useState(null);
   const [isPro, setIsPro] = useState(false);
   const [downloadRes, setDownloadRes] = useState("720p");
 
@@ -51,7 +51,7 @@ const Index = () => {
       alert("Upgrade to Voidr Pro to download HD videos without watermark!");
       return;
     }
-    const dlUrl = `${resultUrl}?resolution=${downloadRes}&watermark=${isPro ? "0" : "1"}`;
+    const dlUrl = resultUrl + "?resolution=" + downloadRes + "&watermark=" + (isPro ? "0" : "1");
     window.open(dlUrl, "_blank");
   };
 
@@ -118,7 +118,7 @@ const Index = () => {
 
           {loading && (
             <div className="flex justify-center">
-              <div className="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-16 w-16"></div>
+              <div className="animate-spin rounded-full border-4 border-t-4 border-gray-300 border-t-indigo-500 h-12 w-12"></div>
             </div>
           )}
 
@@ -127,7 +127,7 @@ const Index = () => {
               <h3 className="text-xl font-semibold">Preview</h3>
               <div className="aspect-video bg-black rounded-lg overflow-hidden">
                 <video
-                  src={`${resultUrl}?watermark=${isPro ? "0" : "1"}`}
+                  src={resultUrl + "?watermark=" + (isPro ? "0" : "1")}
                   controls
                   className="w-full h-full object-cover"
                 />
@@ -152,18 +152,6 @@ const Index = () => {
             </div>
           )}
         </div>
-
-        <style jsx>{`
-          .loader {
-            border-top-color: #4f46e5;
-            animation: spin 1s infinite linear;
-          }
-          @keyframes spin {
-            to {
-              transform: rotate(360deg);
-            }
-          }
-        `}</style>
       </div>
 
       <Footer />
