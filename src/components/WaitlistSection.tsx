@@ -40,7 +40,7 @@ export const WaitlistSection = () => {
             Be the First to Try Voidr.Health
           </h2>
           <p className="text-xl text-slate-600 mb-8">
-            Get early access + 5 free AI video credits when we launch
+          
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
@@ -48,7 +48,8 @@ export const WaitlistSection = () => {
               whileFocus={{ scale: 1.02 }}
               className="relative"
             >
-              <Input
+              
+             <Input
                 type="email"
                 placeholder="Enter your email address"
                 value={email}
