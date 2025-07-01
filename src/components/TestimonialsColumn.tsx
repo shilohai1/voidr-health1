@@ -7,7 +7,7 @@ interface Testimonial {
   text: string;
   name: string;
   role: string;
-  image: string;
+  image?: string; // Optional image URL
 }
 
 interface TestimonialsColumnProps {
@@ -46,11 +46,8 @@ export const TestimonialsColumn = ({ className, testimonials, duration = 10 }: T
               >
                 <p className="text-slate-700 mb-4">"{testimonial.text}"</p>
                 <div className="flex items-center gap-3">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                
+              
                   <div>
                     <div className="font-medium text-slate-900">{testimonial.name}</div>
                     <div className="text-sm text-slate-600">{testimonial.role}</div>
