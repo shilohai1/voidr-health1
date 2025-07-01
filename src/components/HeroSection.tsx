@@ -73,12 +73,12 @@ export const HeroSection = () => {
           {/* Main input field */}
           <div id="main" className="relative group">
             <input
-              placeholder="Paste your medical topic here..."
+              placeholder="Paste your prompt..."
               type="text"
               name="text"
               value={script}
               onChange={(e) => setScript(e.target.value)}
-              className="bg-[#daecf7] border-none w-[301px] h-[56px] rounded-lg text-white px-[59px] text-lg focus:outline-none placeholder-gray-400"
+              className="bg-[#e6f6fa] border-none w-[301px] h-[56px] rounded-lg text-white px-[59px] text-lg focus:outline-none placeholder-gray-400"
             />
 
             <div className="absolute left-5 top-[15px]">
@@ -105,7 +105,7 @@ export const HeroSection = () => {
         <Button
           onClick={handleGenerate}
           disabled={loading}
-          className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-3 text-lg rounded-lg shadow-md disabled:opacity-50"
+          className="mt-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-2 text-lg rounded-lg shadow-md disabled:opacity-50"
         >
           {loading ? "Generating..." : "Generate"}
         </Button>
