@@ -14,7 +14,7 @@ export const ProductPreviewSection = () => {
       name: "StudyWithAI",
       description: "Transform your study materials into engaging video content",
       features: ["AI-generated explanations", "Visual learning aids", "Custom pace control"],
-      mockup: "🎥"
+      mockup: "https://www.pexels.com/photo/hand-x-ray-result-207496/"
     },
     {
       id: "clinicbot",
