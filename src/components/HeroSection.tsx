@@ -1,12 +1,33 @@
-
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import SearchComponent from "@/components/ui/animated-glowing-search-bar";
 
 export const HeroSection = () => {
-  const scrollToWaitlist = () => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
+  const [script, setScript] = useState("");
+  const [voice] = useState("male");
+  const [loading, setLoading] = useState(false);
+  const [resultUrl, setResultUrl] = useState<string | null>(null);
+
+  const handleGenerate = async () => {
+    if (!script.trim()) return;
+    setLoading(true);
+    setResultUrl(null);
+    try {
+      const res = await fetch("/api/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ script, voice }),
+      });
+      const { url } = await res.json();
+      setResultUrl(url);
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -35,29 +56,45 @@ export const HeroSection = () => {
         From a med student. For a med student.
       </motion.p>
 
+      {/* Input + Generate Button */}
       <motion.div
+        className="flex flex-col md:flex-row items-center justify-center gap-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
+        <input
+          type="text"
+          value={script}
+          onChange={(e) => setScript(e.target.value)}
+          placeholder="Paste your medical topic here..."
+          className="w-full md:w-[400px] px-4 py-3 text-lg rounded-lg border border-gray-300 shadow focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
         <Button
-          onClick={scrollToWaitlist}
-          className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+          onClick={handleGenerate}
+          disabled={loading}
+          className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-6 py-3 text-lg rounded-lg shadow-md disabled:opacity-50"
         >
-          <motion.span
-            animate={{ 
-              boxShadow: ["0 0 0 0 rgba(34, 197, 94, 0.4)", "0 0 0 10px rgba(34, 197, 94, 0)"] 
-            }}
-            transition={{ 
-              duration: 2, 
-              repeat: Infinity 
-            }}
-            className="inline-block"
-          >
-            Join the Waitlist
-          </motion.span>
+          {loading ? "Generating..." : "Generate"}
         </Button>
       </motion.div>
+
+      {/* Optional glowing animation bar */}
+      <div className="mt-10">
+        <SearchComponent />
+      </div>
+
+      {/* Optional result preview */}
+      {resultUrl && (
+        <div className="mt-10">
+          <h3 className="text-xl font-semibold mb-4">Preview</h3>
+          <video
+            src={resultUrl}
+            controls
+            className="w-full max-w-xl mx-auto rounded-xl shadow-xl"
+          />
+        </div>
+      )}
     </div>
   );
 };
