@@ -4,20 +4,30 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TestimonialsColumn } from "@/components/TestimonialsColumn";
 const testimonials = [{
-  text: "ClinicBot honestly saved me hours last week. The automated documentation is a game-changer.",
+  text: "ClinicBot honestly saved me hours and hours last week. The automated documentation is a game-changer. The other cool feature is the part where they can shorten documents to just mere prescriptions",
   name: "Dr. Aisha",
   role: "Intern",
-  image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
+ 
 }, {
-  text: "I finally *understand* pathology thanks to PathoSketch. The visual learning is incredible.",
+  text: "I finally *understand* pathology thanks to PathoSketch. The visual learning is incredible. Free plan was useful but now I needed to take the premium plan cause I'm completley dependant on it now",
   name: "Zaid",
   role: "2nd Year Med Student",
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+ 
 }, {
-  text: "StudyWithAI helped me review entire systems in minutes. Perfect for USMLE prep!",
+  text: "I'm an Indian medical student and come from a curriculum where it is solely based on books and rote learning. Atleast Voidr helped me find a different approach to learning new concepts",
+  name: "Divya Naik",
+  role: "1st Year Med Student",
+
+}, {
+  text: "I'm usually a visual learner. Medical school would've been a nightmare without Voidr",
+  name: "Asher",
+  role: "2nd Year Med Student",
+  
+}, {
+  text: "StudyWithAI helped me review the entire systems in clinical pathophysiologyin minutes. Perfect for USMLE step 1 prep!",
   name: "Riya",
-  role: "USMLE Prepper",
-  image: "https://images.unsplash.com/photo-1494790108755-2616b612b77c?w=400&h=400&fit=crop&crop=face"
+  role: "USMLE Prep student",
+  
 }];
 export const TestimonialsSection = () => {
   return <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
