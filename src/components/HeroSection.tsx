@@ -78,7 +78,7 @@ export const HeroSection = () => {
               name="text"
               value={script}
               onChange={(e) => setScript(e.target.value)}
-              className="bg-[#010201] border-none w-[301px] h-[56px] rounded-lg text-white px-[59px] text-lg focus:outline-none placeholder-gray-400"
+              className="bg-[#daecf7] border-none w-[301px] h-[56px] rounded-lg text-white px-[59px] text-lg focus:outline-none placeholder-gray-400"
             />
 
             <div className="absolute left-5 top-[15px]">
