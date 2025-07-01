@@ -76,18 +76,18 @@ const Index = () => {
         <BackgroundBeams />
 
         <div className="bg-white rounded-2xl shadow-lg p-8 space-y-6 relative z-10">
-          <h2 className="text-2xl font-bold text-center">Generate Medical Explainer Video</h2>
+          <h2 className="text-2xl font-bold text-center">Generate Your Medical Explainer Videos</h2>
 
           <div>
             <label className="block text-sm font-medium text-gray-700">
-              Enter your medical topic or script
+              Enter your medical prompt or script
             </label>
             <textarea
               rows={4}
               value={script}
               onChange={(e) => setScript(e.target.value)}
               className="mt-1 w-full rounded-lg border-gray-300 shadow-sm focus:ring-2 focus:ring-indigo-500 p-2"
-              placeholder="e.g. Pathophysiology of diabetes"
+              placeholder="e.g. Explain the pathophysiology of the heart"
             />
           </div>
 
