@@ -12,7 +12,7 @@ export const HeroSection = () => {
   return (
     <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
       <motion.h1
-        className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight"
+        className="text-4xl md:text-6xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -21,7 +21,7 @@ export const HeroSection = () => {
           AI Tools
         </span>
         <br />
-        for Med Students
+        for Med Students, Residents
         <br />
         and Doctors
       </motion.h1>
