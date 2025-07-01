@@ -131,7 +131,7 @@ export const ProductPreviewSection = () => {
                           width={600}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
-                          unoptimized
+                          unoptimized={true}
                         />
                       </motion.div>
                     </CardContent>
@@ -145,6 +145,6 @@ export const ProductPreviewSection = () => {
     </section>
   );
 };
-    </section>
+</section>
   );
-};
+  };
