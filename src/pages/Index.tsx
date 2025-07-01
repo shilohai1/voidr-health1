@@ -13,8 +13,6 @@ import React, { useState } from "react";
 const voices = [
   { label: "Male", value: "male" },
   { label: "Female", value: "female" },
-  { label: "Calm", value: "calm" },
-  { label: "Excited", value: "excited" },
 ];
 
 const Index = () => {
