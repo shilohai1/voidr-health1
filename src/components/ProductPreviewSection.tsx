@@ -109,7 +109,7 @@ export const ProductPreviewSection = () => {
     </section>
   );
 };
-      </div>
-    </section>
+<div>
+</section>
   );
 };
