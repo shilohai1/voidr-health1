@@ -16,20 +16,20 @@ export const PainSolutionSection = () => {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <h2 className="text-sm font-semibold text-red-600 uppercase tracking-wide">
+              <h2 className="text-3xl font-semibold text-red-600 uppercase tracking-wide">
                 The Problem
               </h2>
-              <p className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
-                Medical school is overwhelming for us, documentation is draining, and studying takes forever.
+              <p className="text-2xl md:text-2xl font-bold text-slate-900 leading-tight">
+                Medical school is way too overwhelming for us. Documentation is extremely draining, and studying takes almost forever😭
               </p>
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-sm font-semibold text-green-600 uppercase tracking-wide">
+              <h2 className="text-3xl font-semibold text-green-600 uppercase tracking-wide">
                 Our Solution
               </h2>
-              <p className="text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
-                Voidr.Health automates video explainers, clinical summaries, and whiteboard-style learning — powered by AI.
+              <p className="text-2xl md:text-2xl font-bold text-slate-900 leading-tight">
+                Voidr.Health automates video explainers, clinical summaries, creating short prescriptions and whiteboard-style learning — powered by AI.
               </p>
             </div>
           </motion.div>
