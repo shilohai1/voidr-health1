@@ -10,26 +10,29 @@ export const ProductPreviewSection = () => {
 
   const products = [
     {
-      id: "studywithai",
-      name: "StudyWithAI",
-      description: "Transform your study materials into engaging video content",
-      features: ["AI-generated explanations", "Visual learning aids", "Custom pace control"],
-      mockup: "https://www.pexels.com/photo/hand-x-ray-result-207496/"
-    },
-    {
-      id: "clinicbot",
-      name: "ClinicBot",
-      description: "Streamline clinical documentation with AI assistance",
-      features: ["Automated note-taking", "Clinical decision support", "Template generation"],
-      mockup: "📋"
-    },
-    {
-      id: "pathosketch",
-      name: "PathoSketch",
-      description: "Visual pathology learning with interactive diagrams",
-      features: ["Interactive diagrams", "Whiteboard-style learning", "Pathology animations"],
-      mockup: "🧬"
-    }
+  id: "studywithai",
+  name: "StudyWithAI",
+  description: "Generate AI-powered explainer videos from lecture slides",
+  features: ["AI explainer videos", "Upload slides or notes", "Medical concepts simplified"],
+  mockup: "🎥",
+  image: "https://images.pexels.com/photos/207496/pexels-photo-207496.jpeg"
+},
+{
+  id: "clinicbot",
+  name: "ClinicBot",
+  description: "Streamline clinical documentation with AI assistance",
+  features: ["Automated note-taking", "Clinical decision support", "Template generation"],
+  mockup: "📋",
+  image: "https://images.pexels.com/photos/5998440/pexels-photo-5998440.jpeg"
+},
+{
+  id: "pathosketch",
+  name: "PathoSketch",
+  description: "Visual pathology learning with interactive diagrams",
+  features: ["Interactive diagrams", "Whiteboard-style learning", "Pathology animations"],
+  mockup: "🧬",
+  image: "https://images.pexels.com/photos/4065892/pexels-photo-4065892.jpeg"
+}
   ];
 
   return (
