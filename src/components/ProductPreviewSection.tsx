@@ -1,63 +1,38 @@
 
 "use client";
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const ProductPreviewSection = () => {
   const [activeTab, setActiveTab] = useState("studywithai");
 
   const products = [
     {
-      id: "studywithai",
-      name: "StudyWithAI",
-      description: "Generate AI-powered explainer videos from lecture slides",
-      features: [
-        "AI explainer videos",
-        "Upload slides or notes",
-        "Medical concepts simplified",
-      ],
-      mockup: "🎥",
-      image: "https://images.pexels.com/photos/207496/pexels-photo-207496.jpeg",
-    },
-    {
-      id: "clinicbot",
-      name: "ClinicBot",
-      description: "Streamline clinical documentation with AI assistance",
-      features: [
-        "Automated note-taking",
-        "Clinical decision support",
-        "Template generation",
-      ],
-      mockup: "📋",
-      image: "https://images.pexels.com/photos/5998440/pexels-photo-5998440.jpeg",
-    },
-    {
-      id: "pathosketch",
-      name: "PathoSketch",
-      description: "Visual pathology learning with interactive diagrams",
-      features: [
-        "Interactive diagrams",
-        "Whiteboard-style learning",
-        "Pathology animations",
-      ],
-      mockup: "🧬",
-      image: "https://images.pexels.com/photos/4065892/pexels-photo-4065892.jpeg",
-    },
+  id: "studywithai",
+  name: "StudyWithAI",
+  description: "Generate AI-powered explainer videos from lecture slides",
+  features: ["AI explainer videos", "Upload slides or notes", "Medical concepts simplified"],
+  mockup: "🎥",
+  image: "https://images.pexels.com/photos/207496/pexels-photo-207496.jpeg"
+},
+{
+  id: "clinicbot",
+  name: "ClinicBot",
+  description: "Streamline clinical documentation with AI assistance",
+  features: ["Automated note-taking", "Clinical decision support", "Template generation"],
+  mockup: "📋",
+  image: "https://images.pexels.com/photos/5998440/pexels-photo-5998440.jpeg"
+},
+{
+  id: "pathosketch",
+  name: "PathoSketch",
+  description: "Visual pathology learning with interactive diagrams",
+  features: ["Interactive diagrams", "Whiteboard-style learning", "Pathology animations"],
+  mockup: "🧬",
+  image: "https://images.pexels.com/photos/4065892/pexels-photo-4065892.jpeg"
+}
   ];
 
   return (
@@ -74,8 +49,7 @@ export const ProductPreviewSection = () => {
             See Voidr in Action
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Discover how our AI-powered tools can transform your medical
-            education and practice
+            Discover how our AI-powered tools can transform your medical education and practice
           </p>
         </motion.div>
 
@@ -110,30 +84,19 @@ export const ProductPreviewSection = () => {
                       </CardDescription>
                       <ul className="space-y-2">
                         {product.features.map((feature, index) => (
-                          <li
-                            key={index}
-                            className="flex items-center space-x-3"
-                          >
+                          <li key={index} className="flex items-center space-x-3">
                             <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                             <span className="text-slate-700">{feature}</span>
                           </li>
                         ))}
                       </ul>
                     </CardHeader>
-
                     <CardContent className="flex items-center justify-center">
                       <motion.div
                         whileHover={{ scale: 1.05 }}
-                        className="w-full h-80 rounded-2xl overflow-hidden shadow-xl"
+                        className="w-full h-64 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center text-8xl"
                       >
-                        <Image
-                          src={product.image}
-                          alt={`${product.name} preview`}
-                          width={600}
-                          height={400}
-                          className="w-full h-full object-cover rounded-2xl"
-                          unoptimized={true} // ✅ prevents build errors without config
-                        />
+                        {product.mockup}
                       </motion.div>
                     </CardContent>
                   </div>
@@ -142,6 +105,10 @@ export const ProductPreviewSection = () => {
             </TabsContent>
           ))}
         </Tabs>
+      </div>
+    </section>
+  );
+};
       </div>
     </section>
   );
