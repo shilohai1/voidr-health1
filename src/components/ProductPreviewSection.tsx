@@ -1,5 +1,6 @@
 
 "use client";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -131,7 +132,7 @@ export const ProductPreviewSection = () => {
                           width={600}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
-                          unoptimized={true}
+                          unoptimized={true} // ✅ prevents build errors without config
                         />
                       </motion.div>
                     </CardContent>
@@ -145,6 +146,3 @@ export const ProductPreviewSection = () => {
     </section>
   );
 };
-</section>
-  );
-  };
